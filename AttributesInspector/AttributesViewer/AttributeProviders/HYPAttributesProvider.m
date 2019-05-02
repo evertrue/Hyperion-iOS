@@ -48,8 +48,8 @@
 {
     NSMutableArray<id<HYPInspectorAttribute>> *viewAttributes = [[NSMutableArray alloc] init];
 
-    NSString *backgroundColor = [HYPUIHelpers rgbTextForColor:view.backgroundColor];
-    HYPKeyValueInspectorAttribute *backgroundColorAttribute = [[HYPKeyValueInspectorAttribute alloc] initWithKey:@"Background Color" value:[NSString stringWithFormat:@"RGBA %@", backgroundColor ? backgroundColor : @"--"]];
+    NSString *backgroundColor = [HYPUIHelpers hexTextForColor:view.backgroundColor];
+    HYPKeyValueInspectorAttribute *backgroundColorAttribute = [[HYPKeyValueInspectorAttribute alloc] initWithKey:@"Background Color" value:[NSString stringWithFormat:@"%@", backgroundColor ? backgroundColor : @"--"]];
 
     [viewAttributes addObject:backgroundColorAttribute];
 

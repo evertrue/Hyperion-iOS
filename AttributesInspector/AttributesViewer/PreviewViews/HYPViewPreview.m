@@ -40,15 +40,10 @@
     _backgroundColorView.layer.cornerRadius = _backgroundColorView.frame.size.height/2;
     _backgroundColorView.backgroundColor = view.backgroundColor;
 
-    NSString *rgbText = [HYPUIHelpers rgbTextForColor:view.backgroundColor];
-    if (rgbText)
+    NSString *hexText = [HYPUIHelpers hexTextForColor:view.backgroundColor];
+    if (hexText)
     {
-        _colorLabel.text = [NSString stringWithFormat:@"RGBA %@", rgbText];
-        NSString *hexText = [HYPUIHelpers hexTextForColor:view.backgroundColor];
-        if (hexText)
-        {
-            _colorLabel.text = [NSString stringWithFormat:@"%@ (%@)", _colorLabel.text, hexText];
-        }
+        _colorLabel.text = [NSString stringWithFormat:@"%@", hexText];
     }
     else
     {

@@ -104,10 +104,10 @@
 
     self.colorCircle.backgroundColor = color;
 
-    NSString *colorText = [HYPUIHelpers rgbTextForColor:color];
+    NSString *colorText = [HYPUIHelpers hexTextForColor:color];
     if (colorText)
     {
-        self.colorLabel.text = [NSString stringWithFormat:@"RGBA %@", colorText];
+        self.colorLabel.text = [NSString stringWithFormat:@"%@", colorText];
     }
     else
     {
