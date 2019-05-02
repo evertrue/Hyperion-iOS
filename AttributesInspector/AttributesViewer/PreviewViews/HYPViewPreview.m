@@ -44,6 +44,11 @@
     if (rgbText)
     {
         _colorLabel.text = [NSString stringWithFormat:@"RGBA %@", rgbText];
+        NSString *hexText = [HYPUIHelpers hexTextForColor:view.backgroundColor];
+        if (hexText)
+        {
+            _colorLabel.text = [NSString stringWithFormat:@"%@ (%@)", _colorLabel.text, hexText];
+        }
     }
     else
     {
